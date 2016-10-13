@@ -18,6 +18,8 @@
     <PythonWsgiHandler>$(MSBuildProjectName).app</PythonWsgiHandler>
     <Name>VirutalShopper</Name>
     <RootNamespace>VirutalShopper</RootNamespace>
+    <InterpreterId>{49b6c136-71fb-4c78-9f99-5e657ee6a59e}</InterpreterId>
+    <InterpreterVersion>3.5</InterpreterVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -68,6 +70,19 @@
     <Content Include="VirutalShopper\templates\contact.html" />
     <Content Include="VirutalShopper\templates\index.html" />
     <Content Include="VirutalShopper\templates\layout.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="vshopper\">
+      <Id>{49b6c136-71fb-4c78-9f99-5e657ee6a59e}</Id>
+      <BaseInterpreter>{9a7a9026-48c1-4688-9d5d-e5699d47d074}</BaseInterpreter>
+      <Version>3.5</Version>
+      <Description>vshopper (Python 64-bit 3.5)</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <LibraryPath>Lib\</LibraryPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>Amd64</Architecture>
+    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
